@@ -1,0 +1,1 @@
+print(max(int(line.translate(str.maketrans('FBLR', '0101')), 2) for line in open('input')))
