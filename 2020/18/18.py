@@ -17,6 +17,7 @@ def calc(m):
     b = int(m.group(3))
     return str(a + b if m.group(2) == '+' else a * b)
 
+
 def p1(line):
     line = f'({line})'
     while not line.isdigit():
@@ -44,6 +45,6 @@ def p2(line):
         line = re.sub(r'(?<=\()\d+(?: \* \d+)+?(?=\))', prod, line)
     return int(line)
 
+
 print(sum(p1(line) for line in lines))
 print(sum(p2(line) for line in lines))
-
